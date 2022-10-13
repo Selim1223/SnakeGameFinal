@@ -1,4 +1,4 @@
-﻿using SnakeGameFinal;
+﻿using SnakeGameFinal.Classes;
 using System.Numerics;
 
 class Program

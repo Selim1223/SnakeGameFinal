@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SnakeGameFinal
+namespace SnakeGameFinal.Classes
 {
     public class Game
     {
@@ -14,9 +14,9 @@ namespace SnakeGameFinal
 
         public Game(int turn, List<Player> players)
         {
-            this.gameTurn = turn;
+            gameTurn = turn;
             this.players = players;
-            this.gameIsFinished = false;
+            gameIsFinished = false;
         }
 
         public void startGame()
@@ -40,7 +40,7 @@ namespace SnakeGameFinal
 
         private bool GetWinnerPlayer(Player player)
         {
-            this.gameIsFinished = true;
+            gameIsFinished = true;
             Console.WriteLine("Le joueur " + player.name + " a gagné la partie !");
             return true;
         }
