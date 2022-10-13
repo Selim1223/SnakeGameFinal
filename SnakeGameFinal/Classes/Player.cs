@@ -18,7 +18,7 @@ namespace SnakeGameFinal.Classes
 
         public void DiceRoll()
         {
-            int number = Dice.roll();
+            int number = Dice.Roll();
             newPosition += number;
             Console.WriteLine(name + " a jeté son dé et à obtenu le score de " + number + " sa position est de " + newPosition);
             if (newPosition > 50)

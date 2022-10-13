@@ -8,21 +8,21 @@ namespace SnakeGameFinal.Classes
 {
     public class Game
     {
-        private int gameTurn { get; set; }
-        private List<Player> players { get; set; }
-        bool gameIsFinished { get; set; }
+        private int GameTurn { get; set; }
+        private List<Player> Players { get; set; }
+        bool GameIsFinished { get; set; }
 
         public Game(int turn, List<Player> players)
         {
-            gameTurn = turn;
-            this.players = players;
-            gameIsFinished = false;
+            GameTurn = turn;
+            this.Players = players;
+            GameIsFinished = false;
         }
 
-        public void startGame()
+        public void StartGame()
         {
-            while (!gameIsFinished)
-                foreach (Player player in players)
+            while (!GameIsFinished)
+                foreach (Player player in Players)
                 {
                     player.DiceRoll();
                     if (CheckIfPlayerWin())
@@ -32,15 +32,15 @@ namespace SnakeGameFinal.Classes
 
         private bool CheckIfPlayerWin()
         {
-            foreach (Player player in players)
-                if (player.newPosition == gameTurn)
+            foreach (Player player in Players)
+                if (player.newPosition == GameTurn)
                     return GetWinnerPlayer(player);
             return false;
         }
 
         private bool GetWinnerPlayer(Player player)
         {
-            gameIsFinished = true;
+            GameIsFinished = true;
             Console.WriteLine("Le joueur " + player.name + " a gagné la partie !");
             return true;
         }

@@ -6,17 +6,17 @@ class Program
 
     private static void Main(string[] args)
     {
-        startSnakeGame();
+        StartSnakeGame();
     }
 
-    private static void startSnakeGame()
+    private static void StartSnakeGame()
     {
         int gameTurn = 50;
         List<Player> players = new List<Player>();
         players.Add(new Player("John"));
         players.Add(new Player("Tom"));
         Game board = new Game(gameTurn, players);
-        board.startGame();
+        board.StartGame();
     }
 
 }

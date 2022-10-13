@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace SnakeGameFinal.Classes
 {
-    public static class Dice
+    public class Dice
     {
         private static Random random = new Random();
-        private static int numberOfFace { get; set; }
 
-        public static int roll()
+        public static int Roll()
         {
             return random.Next(1, 7);
         }
