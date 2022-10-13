@@ -20,12 +20,12 @@ namespace SnakeGameFinal
         {
             int number = Dice.roll();
             newPosition += number;
+            Console.WriteLine(name + " a jeté son dé et à obtenu le score de " + number + " sa position est de " + newPosition);
             if (newPosition > 50)
             {
                 newPosition = 25;
                 Console.WriteLine(name + " a dépassé la position 50, il retombe à 25");
             }
-            Console.WriteLine(name + " a jeté son dé et à obtenu le score de " + number + " sa position est de " + newPosition);
             Console.WriteLine("\n");
         }
 

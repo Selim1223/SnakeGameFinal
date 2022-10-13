@@ -34,11 +34,11 @@ namespace SnakeGameFinal
         {
             foreach (Player player in players)
                 if (player.newPosition == gameTurn)
-                    return HandleWinnerPlayer(player);
+                    return GetWinnerPlayer(player);
             return false;
         }
 
-        private bool HandleWinnerPlayer(Player player)
+        private bool GetWinnerPlayer(Player player)
         {
             this.gameIsFinished = true;
             Console.WriteLine("Le joueur " + player.name + " a gagné la partie !");
